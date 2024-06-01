@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cxlmm0eul-python-gitops
+  description: This is GitOps manifest for cxlmm0eul-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: cxlmm0eul-python
+    janus-idp.io/tekton: cxlmm0eul-python 
+    backstage.io/kubernetes-id: cxlmm0eul-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:cxlmm0eul-python
